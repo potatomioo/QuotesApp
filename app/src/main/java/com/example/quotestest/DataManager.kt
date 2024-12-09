@@ -11,6 +11,8 @@ object DataManager {
     var data = emptyArray<QuotesItem>()
     var isDataLoaded = mutableStateOf(false)
 
+    //All the data objects can be accessed from any thread.
+
     fun readDataFromFile(context: Context){
         val inputStream = context.assets.open("quotesSource.Json")
         val size: Int = inputStream.available()
